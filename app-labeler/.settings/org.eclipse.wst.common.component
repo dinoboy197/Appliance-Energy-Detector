@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Appliance Energy Visualizer">
+        <wb-resource deploy-path="/" source-path="/web"/>
+        <wb-resource deploy-path="/" source-path="/java"/>
+        <wb-resource deploy-path="/" source-path="/src/java"/>
+        <wb-resource deploy-path="/" source-path="/gen-src/java"/>
+        <wb-resource deploy-path="/" source-path="/conf"/>
+        <wb-resource deploy-path="/" source-path="/test/java"/>
+        <wb-resource deploy-path="/" source-path="/conf/staging"/>
+        <property name="context-root" value="/"/>
+        <property name="java-output-path" value="/Appliance Energy Labeler/web/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

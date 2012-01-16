@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is part of the Appliance Energy Detector, a free household appliance energy disaggregation intelligence engine and webapp.
+  
+  Copyright (C) 2011,2012 Taylor Raack <traack@raack.info>
+  
+  The Appliance Energy Detector is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  
+  The Appliance Energy Detector is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+  
+  You should have received a copy of the GNU Affero General Public License along with the Appliance Energy Detector.  If not, see <http://www.gnu.org/licenses/>.
+  
+  According to sec. 7 of the GNU Affero General Public License, version 3, the terms of the AGPL are supplemented with the following terms:
+  
+  If you modify this Program, or any covered work, by linking or combining it with any of the following programs (or modified versions of those libraries), containing parts covered by the terms of those libraries licenses, the licensors of this Program grant you additional permission to convey the resulting work:
+  
+  Javabeans(TM) Activation Framework 1.1 (activation) - Common Development and Distribution License Version 1.0
+  AspectJ 1.6.9 (aspectjrt and aspectjweaver) - Eclipse Public License 1.0
+  EMMA 2.0.5312 (emma and emma_ant) - Common Public License Version 1.0
+  JAXB Project Libraries 2.2.2 (jaxb-api, jaxb-impl, jaxb-xjc) - Common Development and Distribution License Version 1.0
+  Java Standard Template Library 1.2 (jstl) - Common Development and Distribution License Version 1.0
+  Java Servlet Pages API 2.1 (jsp-api) - Common Development and Distribution License Version 1.0
+  Java Transaction API 1.1 (jta) - Common Development and Distribution License Version 1.0
+  JavaMail(TM) 1.4.1 (mail) - Common Development and Distribution License Version 1.0
+  XML Pull Parser 3 (xpp3) - Indiana University Extreme! Lab Software License Version 1.1.1
+  
+  The interactive user interface of the software display an attribution notice containing the phrase "Appliance Energy Detector". Interactive user interfaces of unmodified and modified versions must display Appropriate Legal Notices according to sec. 5 of the GNU Affero General Public License, version 3, when you propagate an unmodified or modified version of the Program. In accordance with sec. 7 b) of the GNU Affero General Public License, version 3, these Appropriate Legal Notices must prominently display either a) "Initial Development by <a href='http://www.linkedin.com/in/taylorraack'>Taylor Raack</a>" if displayed in a web browser or b) "Initial Development by Taylor Raack (http://www.linkedin.com/in/taylorraack)" if displayed otherwise.
+-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="linkType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="type" use="optional"/>
+        <xs:attribute type="xs:string" name="rel" use="optional"/>
+        <xs:attribute type="xs:string" name="href" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+
+  
+  <!-- elements for transmission of ted raw data -->
+  
+  <xs:complexType name="raw_ted_data_type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="raw" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:element name="ted5000_mtu_seconds" type="ted5000_mtu_second_data" />
+  <xs:complexType name="ted5000_mtu_second_data">
+  	<xs:complexContent>
+      <xs:extension base="ted5000_mtu_data">
+        <xs:sequence>
+        	<xs:element type="raw_ted_data_type" name="second" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:element name="ted5000_mtu_minutes" type="ted5000_mtu_minute_data" />
+  <xs:complexType name="ted5000_mtu_minute_data">
+  	<xs:complexContent>
+      <xs:extension base="ted5000_mtu_data">
+        <xs:sequence>
+        	<xs:element type="raw_ted_data_type" name="minute" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:element name="ted5000_mtu_hours" type="ted5000_mtu_hour_data" />
+  <xs:complexType name="ted5000_mtu_hour_data">
+  	<xs:complexContent>
+      <xs:extension base="ted5000_mtu_data">
+        <xs:sequence>
+        	<xs:element type="raw_ted_data_type" name="hour" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:element name="ted5000_mtu_days" type="ted5000_mtu_day_data" />
+  <xs:complexType name="ted5000_mtu_day_data">
+  	<xs:complexContent>
+      <xs:extension base="ted5000_mtu_data">
+        <xs:sequence>
+        	<xs:element type="raw_ted_data_type" name="day" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:element name="ted5000_mtu_months" type="ted5000_mtu_month_data" />
+  <xs:complexType name="ted5000_mtu_month_data">
+  	<xs:complexContent>
+      <xs:extension base="ted5000_mtu_data">
+        <xs:sequence>
+        	<xs:element type="raw_ted_data_type" name="month" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ted5000_mtu_data">
+    <xs:sequence>
+      <xs:element type="linkType" name="link" maxOccurs="2" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="LiveData" type="Ted5000_live_data"/>
+  <xs:complexType name="Ted5000_live_data">
+    <xs:sequence>
+      <xs:element type="GatewayTime" name="GatewayTime"/>
+      <xs:element type="ThermostatType" name="Thermostat"/>
+      <xs:element type="VoltageType" name="Voltage"/>
+      <xs:element type="PowerType" name="Power"/>
+      <xs:element type="CostType" name="Cost"/>
+      <xs:element type="SystemType" name="System"/>
+      <xs:element type="xs:string" name="subwat"/>
+      <xs:element type="xs:string" name="subcost"/>
+      <xs:element type="UtilityType" name="Utility"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="GatewayTime">
+    <xs:sequence>
+      <xs:element type="xs:int" name="Hour"/>
+      <xs:element type="xs:int" name="Minute"/>
+      <xs:element type="xs:int" name="Month"/>
+      <xs:element type="xs:int" name="Day"/>
+      <xs:element type="xs:int" name="Year"/>
+      <xs:element type="xs:int" name="Second"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ThermostatType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="RoomTemp"/>
+      <xs:element type="xs:byte" name="CoolSP"/>
+      <xs:element type="xs:byte" name="HeatSP"/>
+      <xs:element type="xs:byte" name="Mode"/>
+      <xs:element type="xs:byte" name="SOOMode"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="LiveDataMTUType">
+    <xs:sequence>
+      <xs:element type="xs:int" name="VoltageNow" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageToday" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageTodayTimeHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageTodayTimeMin" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageToday" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageTodayTimeHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageTodayTimeMin" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageMTDDateMonth" minOccurs="0"/>
+      <xs:element type="xs:int" name="LowVoltageMTDDateDay" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageMTDDateMonth" minOccurs="0"/>
+      <xs:element type="xs:int" name="HighVoltageMTDDateDay" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerNow" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerTDY" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerProj" minOccurs="0"/>
+      <xs:element type="xs:int" name="KVA" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostNow" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostTDY" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostProj" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakTdy" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakTdyHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakTdyMin" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakMTDMonth" minOccurs="0"/>
+      <xs:element type="xs:int" name="PeakMTDDay" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinTdy" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinMTD" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinTdyHour" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinTdyMin" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinMTDMonth" minOccurs="0"/>
+      <xs:element type="xs:int" name="MinMTDDay" minOccurs="0"/>
+      <xs:element type="xs:int" name="PowerAvg" minOccurs="0"/>
+      <xs:element type="xs:int" name="CostAvg" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="VoltageType">
+    <xs:sequence>
+      <xs:element type="LiveDataMTUType" name="Total"/>
+      <xs:element type="LiveDataMTUType" name="MTU1"/>
+      <xs:element type="LiveDataMTUType" name="MTU2"/>
+      <xs:element type="LiveDataMTUType" name="MTU3"/>
+      <xs:element type="LiveDataMTUType" name="MTU4"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="PowerType">
+    <xs:sequence>
+      <xs:element type="LiveDataMTUType" name="Total"/>
+      <xs:element type="LiveDataMTUType" name="MTU1"/>
+      <xs:element type="LiveDataMTUType" name="MTU2"/>
+      <xs:element type="LiveDataMTUType" name="MTU3"/>
+      <xs:element type="LiveDataMTUType" name="MTU4"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CostType">
+    <xs:sequence>
+      <xs:element type="LiveDataMTUType" name="Total"/>
+      <xs:element type="LiveDataMTUType" name="MTU1"/>
+      <xs:element type="LiveDataMTUType" name="MTU2"/>
+      <xs:element type="LiveDataMTUType" name="MTU3"/>
+      <xs:element type="LiveDataMTUType" name="MTU4"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="SystemType">
+    <xs:sequence>
+      <xs:element type="xs:byte" name="NumberMTU"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="UtilityType">
+    <xs:sequence>
+      <xs:element type="xs:short" name="CarbonRate"/>
+      <xs:element type="xs:short" name="CurrentRate"/>
+      <xs:element type="xs:byte" name="MeterReadDate"/>
+      <xs:element type="xs:byte" name="DaysLeftInBillingCycle"/>
+      <xs:element type="xs:byte" name="PlanType"/>
+      <xs:element type="xs:byte" name="CurrentTier"/>
+      <xs:element type="xs:byte" name="CurrentTOU"/>
+      <xs:element type="xs:string" name="CurrentTOUDescription"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+  <xs:element name="user" type="stepgreen_user" />
+  <xs:complexType name="commitments">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:int" name="weeks_since_last_report"/>
+        <xs:attribute type="xs:int" name="number_of_current_actions"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="user_actions">
+  	<xs:sequence>
+  		<xs:element type="linkType" name="link" />
+  	</xs:sequence>
+    <xs:attribute type="xs:int" name="total"/>
+  </xs:complexType>
+  
+  <xs:complexType name="location">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="country"/>
+        <xs:attribute type="xs:string" name="postal_code"/>
+        <xs:attribute type="xs:string" name="city" />
+        <xs:attribute type="xs:string" name="state" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="consentForm">
+    <xs:sequence>
+  		<xs:element type="linkType" name="link" minOccurs="0" />
+  	</xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  
+  <xs:complexType name="stepgreen_user">
+    <xs:all>
+      <xs:element type="linkType" name="link"/>
+      <xs:element type="commitments" name="commitments"/>
+      <xs:element type="user_actions" name="user_actions" minOccurs="0" />
+      <xs:element type="location" name="location" minOccurs="0" />
+      <xs:element type="xs:string" name="email" minOccurs="0" />
+      <xs:element type="xs:string" name="birthday" minOccurs="0" />
+      <xs:element type="consentForm" name="consent_form" minOccurs="0" />
+    </xs:all>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  
+  
+</xs:schema>

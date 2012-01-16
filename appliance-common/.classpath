@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="tools/lib/compile/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/mail-1.4.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/junit-4.8.2.jar"/>
+	<classpathentry kind="output" path="eclipse-bin"/>
+</classpath>

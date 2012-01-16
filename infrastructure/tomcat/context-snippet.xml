@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- ADD THIS RESOURCE TO YOUR TOMCAT CONTEXT.XML
+REPLACE <username>, <password>, <database>, <junixsocketfile> with appropriate entries for your installation
+-->
+
+<Resource
+  name="jdbc/app-energy-labeler"
+  type="javax.sql.DataSource"
+  maxActive="20"
+  maxIdle="10"
+  username="<username>"
+  maxWait="5000"
+  validationQuery="select 1"        
+  driverClassName="com.mysql.jdbc.Driver"
+  password="<password>"    
+  url="jdbc:mysql:///<database>?rewriteBatchedStatements=true"
+  connectionProperties="socketFactory=org.newsclub.net.mysql.AFUNIXDatabaseSocketFactory;junixsocket.file=<junitsocketfile>" 
+  removeAbandoned="true"
+  removeAbandonedTimeout="60"
+  logAbandoned="true"
+    />
+

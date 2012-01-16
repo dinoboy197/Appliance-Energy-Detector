@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="test/java"/>
+	<classpathentry kind="src" path="gen-src/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-oauth-1.0.0.M3.Taylor.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/ted-data-collector-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-tx-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/mail-1.4.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/mockito-all-1.8.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/spring-test-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/appliance-common-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/weka-collective-classification-2011-10-14-Taylor-SNAPSHOT.jar" sourcepath="/Weka-Semisupervised 2009-10-01"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-batch-core-2.1.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-batch-infrastructure-2.1.8.RELEASE.jar" sourcepath="/home/traack/Downloads/spring-batch-2.1.8.RELEASE/dist"/>
+	<classpathentry kind="lib" path="tools/lib/compile/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/jtransforms-2.4.jar"/>
+	<classpathentry kind="lib" path="/Evaluation Tool/tools/lib/compile/commons-math-2.2.jar"/>
+	<classpathentry kind="output" path="eclipse-bin"/>
+</classpath>

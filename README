@@ -1,0 +1,10 @@
+This is the Appliance Energy Detector, a free household appliance energy disaggregation intelligence engine and webapp, by Taylor Raack <traack@raack.info>.
+
+This Appliance Energy Detector distribution includes:
+Ivy v2.2.0, http://ant.apache.org/ivy/, Copyright 2010, released under the Apache 2 license.
+jQuery Javascript Library v1.5, http://www.jquery.com, Copyright 2011, released under the MIT license.
+jQuery UI v1.8.11, http://jquery.org/license, Copyright 2011, released under the MIT license.
+Sizzle JS, http://sizzlejs.com/, Copyright 2011, The Dojo Foundation, released under the MIT license.
+
+This distribution is designed to use various third-party software programs which are incompatible with the GNU Affero General Public license version 3, under which this program is licensed. If you wish, you may legally download these incompatible programs and link them with the Appliance Energy Detector. However, if you re-distribute this Appliance Energy Detector in original form or a modified version, you may NOT include these incompatible libraries with the distribution.
+

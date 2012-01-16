@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Evaluation Tool">
+        <wb-resource deploy-path="/" source-path="/web"/>
+        <wb-resource deploy-path="/" source-path="/src/java"/>
+        <wb-resource deploy-path="/" source-path="/conf"/>
+        <wb-resource deploy-path="/" source-path="/src/spring"/>
+        <wb-resource deploy-path="/" source-path="/test/java"/>
+        <wb-resource deploy-path="/" source-path="/conf/staging"/>
+        <property name="context-root" value="eval"/>
+        <property name="java-output-path" value="/Evaluation Tool/web/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

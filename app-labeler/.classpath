@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="conf/staging"/>
+	<classpathentry kind="src" path="test/java"/>
+	<classpathentry excluding="desktop/|staging/" kind="src" path="conf"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="tools/lib/compile/ted-data-collector-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-webmvc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-oauth-1.0.0.M3.Taylor.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-security-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/mockito-all-1.8.5.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/appliance-common-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="tools/lib/test/spring-test-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="tools/lib/compile/appliance-detection-engine-1.0-SNAPSHOT.jar" sourcepath="/Appliance Detection Engine/src/java"/>
+	<classpathentry kind="lib" path="tools/lib/compile/gson-1.7.1.jar"/>
+	<classpathentry kind="output" path="web/WEB-INF/classes"/>
+</classpath>

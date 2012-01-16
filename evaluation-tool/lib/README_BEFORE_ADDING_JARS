@@ -1,0 +1,7 @@
+PLEASE DO NOT PUT ADDITIONAL LIBRARIES IN THIS DIRECTORY.
+
+This ivy library here is ONLY to bootstrap the main library load process for all libraries used in the project.
+
+If you wish to add libraries, please add them to the ivy.xml in this project.
+
+See http://transit.apt.ri.cmu.edu:8080/dv1/wiki/Website/DevelopmentSetupInstructions for more information!

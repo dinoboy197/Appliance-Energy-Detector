@@ -1,0 +1,16 @@
+These files are provided for local development.
+
+Here is how I would strongly recommend that you use these files:	
+
+1) If you do not already have a Tomcat 6 installation locally with separate Tomcat home and Tomcat base directories, download Tomcat 6.
+2) Add the snippet in the context-snippet.xml into your local tomcat context.xml file, then customize it.
+3) Add the snippet in the server-snippet.xml into your local tomcat server.xml file, then customize it.
+4) Download and install junixsocket into your Tomcat home, so that the directory structure <tomcathome>/junixsocket-1.3/lib-native exists.
+5) Add the junixsocket-x.jar and junixsocket-mysql-x.jar into your <tomcathome>/lib directory.
+6) Add the mysql-x.jar into your <tomcathome>/lib directory.
+7) Place the start.sh and stop.sh scripts into your Tomcat base, and customize them.
+8) Run "ant update-deps" in the Appliance Energy Labeler and Evaluation Tool projects.
+9) Import the trunk energy labeler and evaluation engine project into Eclipse, and ensure that Build Automatically is set.
+10) Ensure that the code builds locally in Eclipse WITHOUT errors.
+11) Load the database script from the <Appliance Detection Engine Project>/src/db/db.sql into your MySQL database for your project.
+12) Run the start.sh script. 

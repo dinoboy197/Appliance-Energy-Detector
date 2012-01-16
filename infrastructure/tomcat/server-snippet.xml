@@ -1,0 +1,9 @@
+<!-- 
+
+ADD THESE CONTEXT ELEMENTS TO YOUR SERVER.XML FOR LOCAL DEVELOPMENT DEPLOYMENT
+
+REPLACE <trunk workspace> with appropriate entries for your development workspace
+-->
+
+<Context path="/" docBase="<trunk workspace>/trunk/app-labeler/web" debug="0" reloadable="true" />
+<Context path="/eval" docBase="<trunk workspace>/trunk/evaluation-tool/web" debug="0" reloadable="true" />
