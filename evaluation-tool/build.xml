@@ -32,7 +32,6 @@
 	
 	<import file="scripts/common-tasks.xml" />
 	<import file="scripts/common-test-macros.xml" />
-	<import file="scripts/common-deploy.xml" />
 
 	<!-- Source code directories and files -->
 	<property name="src.dir" value="${basedir}/src"/>
